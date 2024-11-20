@@ -15,7 +15,10 @@ const bookSchema = new mongoose.Schema({
     publisher: { type: String, required: true },
     
     // Trường copies (số lượng bản sao), kiểu dữ liệu là Number, giá trị mặc định là 1
-    copies: { type: String, default: 1 },
+    copies: { type: Number, default: 1 },
+    
+    // Trường image (ảnh), kiểu dữ liệu là String (URL), không bắt buộc
+    image: { type: String, default: null },
 });
 
 module.exports = mongoose.model("Book", bookSchema);
